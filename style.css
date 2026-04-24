@@ -1,0 +1,169 @@
+:root {
+  --bg: #f3f4f6;
+  --card: #ffffff;
+  --text: #111827;
+  --subtext: #6b7280;
+  --input: #ffffff;
+  --border: #d1d5db;
+  --button: #2563eb;
+  --button-hover: #1d4ed8;
+  --copy-bg: #e5e7eb;
+  --copy-text: #111827;
+}
+
+body.dark {
+  --bg: #111827;
+  --card: #1f2937;
+  --text: #f9fafb;
+  --subtext: #9ca3af;
+  --input: #374151;
+  --border: #4b5563;
+  --copy-bg: #374151;
+  --copy-text: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  max-width: 430px;
+  margin: 0 auto;
+  background: var(--card);
+  color: var(--text);
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: var(--subtext);
+  line-height: 1.4;
+}
+
+.theme-btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: var(--copy-bg);
+  color: var(--copy-text);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.result-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.result-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px;
+  background: var(--input);
+  color: var(--text);
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+#copyBtn {
+  padding: 0 14px;
+  background: var(--copy-bg);
+  color: var(--copy-text);
+}
+
+.setting {
+  margin-bottom: 18px;
+}
+
+.setting label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.setting input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--input);
+  color: var(--text);
+  outline: none;
+}
+
+.options {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.options label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--text);
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--button);
+  color: white;
+  font-size: 16px;
+}
+
+.generate-btn:hover {
+  background: var(--button-hover);
+}
+
+#message {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: #16a34a;
+  min-height: 20px;
+}
