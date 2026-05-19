@@ -22,6 +22,12 @@ function setTheme(theme) {
 
 function generatePassword() {
   const length = Number(lengthInput.value);
+  
+    if (length < 4 || length > 50) {
+    message.textContent = "Password length must be between 4 and 50.";
+    passwordInput.value = "";
+    return;
+  }
 
   let characters = "";
 
